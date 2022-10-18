@@ -8,6 +8,10 @@
       "type": "mssql",
       "connectionId": "ProductionDbConnection",
       "dynamicId": null
+    },
+    "appInsights1": {
+      "type": "appInsights",
+      "dynamicId": null
     }
   }
 }

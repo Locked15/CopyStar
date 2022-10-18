@@ -11,6 +11,10 @@
       "type": "mssql.onprem",
       "connectionId": "ProductionDbConnection",
       "dynamicId": null
+    },
+    "appInsights1": {
+      "type": "appInsights.sdk",
+      "dynamicId": null
     }
   }
 }
