@@ -34,6 +34,8 @@ namespace CopyStar.Sources
             app.UseRouting();
             app.MapControllerRoute(name: "default",
                                    pattern: "{Controller=Home}/{Action=Welcome}");
+            app.MapControllerRoute(name: "user",
+                                   pattern: "{Controller=User}");
 
             app.MapControllers();
         }

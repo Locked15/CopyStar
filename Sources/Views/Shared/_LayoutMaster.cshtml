@@ -5,12 +5,51 @@
     <meta charset="utf-8" />
     <title>@ViewData["Title"] — CopyStar</title>
 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+
     <link rel="stylesheet" href="~/content/css/main.css"/>
+    <link rel="stylesheet" href="~/node_modules/bootstrap/dist/css/bootstrap.css"/>
+    <link rel="stylesheet" href="~/node_modules/bootstrap/dist/css/bootstrap-utilities.css"/>
+
+    <script src="~/content/js/layout-scripts.js"></script>
 </head>
 
 <body>
-    <header>
-        Header block.
+    <header class="text-black bg-light">
+        <div class="icon-block">
+            <a href="~/" title="На Главную...">
+                <img src="~/content/icons/icon-dark.svg" width="82"/>
+            </a>
+        </div>
+
+        <div class="links-block">
+            <ul class="links-block-content">
+                <li class="nav-item">
+                    <a asp-controller="User" asp-action="Basket" class="nav-links">Корзина</a>
+                </li>
+                <li class="nav-item">
+                    <a asp-controller="Home" asp-action="Catalog" class="nav-links">Каталог</a>
+                </li>
+                <li class="nav-item">
+                    <a asp-controller="Home" asp-action="Information" class="nav-links">Информация</a>
+                </li>
+            </ul>
+        </div>
+
+        <div class="register-block">
+            <div id="base-register-mask" class="base-register" 
+                 onmouseover="registerMaskTouched()">
+                Гость...
+            </div>
+
+            <div id="actual-register-block" class="actual-register" style="display: none;"
+                 onmouseout="registerMaskUntouched()">
+                <a asp-controller="User" asp-action="LogIn" class="reg-links">Вход</a>
+                <a asp-controller="User" asp-action="Register" class="reg-links">Регистрация</a>
+            </div>
+        </div>
     </header>
 
     <main>
@@ -18,7 +57,6 @@
     </main>
 
     <footer>
-        Footer block.
     </footer>
 </body>
 </html>

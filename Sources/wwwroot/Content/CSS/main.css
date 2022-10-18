@@ -1,3 +1,61 @@
-﻿body {
-	background-color: red;
+﻿/* It can be base style. But it doesn't. */
+header {
+    display: flex;
+    flex: auto;
+    gap: 20%;
 }
+
+    header > div.icon-block {
+        display: flex;
+        flex: auto;
+        justify-content: center;
+    }
+
+    header > div.links-block {
+        display: flex;
+        flex: auto;
+        align-self: center;
+    }
+
+    header > div > ul.links-block-content {
+        display: flex;
+        flex-direction: row;
+        gap: 42%;
+        list-style-type: none;
+    }
+
+    header > div.register-block {
+        display: flex;
+        flex: auto;
+        align-self: center;
+        justify-content: center;
+    }
+
+    header > div > div.base-register {
+        display: flex;
+        flex-direction: column;
+    }
+
+    header > div > div.actual-register {
+        display: none;
+        flex-direction: column;
+    }
+
+a {
+    text-decoration: none;
+    font-family: "Inter", sans-serif;
+}
+
+    a:hover {
+        color: rgb(32, 32, 32);
+    }
+
+    a.nav-links {
+        color: gray;
+        text-decoration: dotted;
+    }
+
+    a.reg-links {
+        color: darkgray;
+        text-decoration: dashed;
+    }
