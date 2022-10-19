@@ -16,6 +16,9 @@
 # Mono auto generated files
 mono_crash.*
 
+# Project items resources
+**/icons/items*
+
 # Build results
 [Dd]ebug/
 [Dd]ebugPublic/

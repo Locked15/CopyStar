@@ -82,7 +82,7 @@ div.sell-item-card {
 }
 
     div.sell-item-card > img {
-        max-width: 128px;
+        max-width: 512px;
     }
 
 div.sell-item-content {
