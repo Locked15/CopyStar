@@ -22,5 +22,23 @@ namespace CopyStar.Sources.Models.DataBase
         public virtual CatalogType? Type { get; set; }
         public virtual ICollection<ItemsInOrder> ItemsInOrders { get; set; }
         public virtual ICollection<OrderItem> OrderItems { get; set; }
+
+        public CatalogType? Actual_Type
+        {
+            get
+            {
+                var types = DataContext.Instance.CatalogTypes.ToList();
+                return types.FirstOrDefault(t => t.Id == TypeId);
+            }
+        }
+
+        public CatalogBrand? Actual_Brand
+        {
+            get
+            {
+                var brands = DataContext.Instance.CatalogBrands.ToList();
+                return brands.FirstOrDefault(b => b.Id == BrandId);
+            }
+        }
     }
 }

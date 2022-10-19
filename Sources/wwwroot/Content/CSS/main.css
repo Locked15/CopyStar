@@ -52,10 +52,12 @@ a {
 
     a.nav-links {
         color: gray;
-        text-decoration: dotted;
+        text-decoration: underline;
+        text-decoration-style: dotted;
     }
 
     a.reg-links {
         color: darkgray;
-        text-decoration: dashed;
+        text-decoration: underline;
+        text-decoration-style: dashed;
     }

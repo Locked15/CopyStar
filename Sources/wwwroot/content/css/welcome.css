@@ -1,0 +1,103 @@
+﻿/* Region 1: Main Greeting Panel. */
+
+div.welcome-body {
+    display: flex;
+    flex: auto;
+    flex-direction: column;
+    gap: 10%;
+}
+
+div.welcome-bg {
+    margin: 5%;
+    display: flex;
+    flex: auto;
+    flex-direction: column;
+    background-image: url('https://mdbcdn.b-cdn.net/img/new/slides/041.webp');
+    border-radius: 12px;
+    gap: 12.5%;
+    background-size: cover;
+    align-items: center;
+    text-align: center;
+}
+
+    div.welcome-bg > h1 {
+        font-size: 5rem;
+        font-family: "Intra", sans-serif;
+        color: white;
+    }
+
+    div.welcome-bg > h2 {
+        font-size: 3rem;
+        font-family: "Intra", sans-serif;
+        color: wheat;
+    }
+
+        div.welcome-bg > h2 > span {
+            font-size: 3.125rem;
+            font-family: Georgia, serif;
+            color: lightskyblue;
+            text-decoration: underline;
+            text-decoration-style: wavy;
+        }
+
+    div.welcome-bg > p + p {
+        font-size: 2.25rem;
+        font-family: Nord;
+        color: aquamarine;
+    }
+/* End Region 1. */
+
+/* Region 2: New Items Divider. */
+
+p.new-items-declaration {
+    text-align: center;
+    font-family: "Intra", sans-serif;
+    font-size: 3rem;
+    font-style: italic;
+    font-weight: bold;
+}
+/* End Region 2. */
+
+/* Region 3: Selling Items Content. */
+
+div.latest-sell-items {
+    display: flex;
+    flex: auto;
+    margin: 2%;
+    gap: 4rem;
+    row-gap: 4rem;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-content: center;
+}
+
+div.sell-item-card {
+    display: flex;
+    flex: auto;
+    flex-direction: row;
+    flex-grow: 0.16;
+    border: 2px solid black;
+    border-radius: 7.5px;
+}
+
+    div.sell-item-card > img {
+        max-width: 128px;
+    }
+
+div.sell-item-content {
+    display: flex;
+    flex: auto;
+    flex-direction: column;
+    align-content: center;
+    align-items: stretch;
+    justify-content: center;
+    padding: 2%;
+    border-left: 1px dotted gray;
+}
+
+    div.sell-item-content > ul {
+        list-style-type: none;
+        padding: 0.5em;
+    }
+/* End Region 3. */

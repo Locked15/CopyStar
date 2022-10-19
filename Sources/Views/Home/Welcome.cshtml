@@ -2,6 +2,68 @@
     ViewData["Title"] = "Заглавная";
 }
 
-<body>
-    
-</body>
+<head>
+    <link rel="stylesheet" href="~/content/css/welcome.css" />
+
+    <script src="~/content/js/header-updater.js"></script>
+    <script type="text/javascript">
+        document.addEventListener("DOMContentLoaded", function (event) {
+            updateHeader();
+
+            setInterval(updateHeader, 15000);
+        });
+    </script>
+</head>
+
+<div>
+    <div class="welcome-bg">
+        <h1>Мы представляем вам магазин нового поколения</h1>
+        <p>
+            <h2>
+                Это
+                <span id="animate-text">
+
+                </span>
+                магазин.
+            </h2>
+        </p>
+        <p>
+            Именно здесь вы сможете найти то, чего всегда хотели.
+            У нас есть все.
+        </p>
+    </div>
+
+    <div>
+        <hr />
+
+        <p class="new-items-declaration">
+            Новые товары! <br />
+            Не только сегодня и не только сейчас!
+        </p>
+        <div class="latest-sell-items">
+            @foreach (var item in DataContext.Instance.CatalogItems.ToList().Take(10))
+            {
+                <div class="sell-item-card">
+                    <img src="@item.Image" alt="@item.Name" />
+
+                    <div class="sell-item-content">
+                        Сведения о товаре:
+                        <ul>
+                            <li>
+                                Цена: @item.Price.ToString("0.00") (Р.)
+                            </li>
+                            <li>
+                                Производитель: @(item?.Actual_Brand?.Brand ?? "Неизвестен")
+                            </li>
+                            <li>
+                                Категория: @(item?.Actual_Type?.Type ?? "Неопределенная")
+                            </li>
+                        </ul>
+
+                        <a class="btn btn-outline-primary" href="#">Добавить товар в корзину!</a>
+                    </div>
+                </div>
+            }
+        </div>
+    </div>
+</div>
