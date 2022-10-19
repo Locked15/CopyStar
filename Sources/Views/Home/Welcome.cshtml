@@ -6,6 +6,7 @@
     <link rel="stylesheet" href="~/content/css/welcome.css" />
 
     <script src="~/content/js/header-updater.js"></script>
+    <script src="~/content/js/basket-informer.js"></script>
     <script type="text/javascript">
         document.addEventListener("DOMContentLoaded", function (event) {
             updateHeader();
@@ -43,14 +44,16 @@
         <div class="latest-sell-items">
             @foreach (var item in DataContext.Instance.CatalogItems.ToList().Take(10))
             {
+                string safeName = item?.Name ?? "Неизвестно";
+
                 <div class="sell-item-card">
-                    <img src="@item.Image" alt="@item.Name" />
+                    <img src="@safeName" alt="@safeName" />
 
                     <div class="sell-item-content">
-                        Сведения о товаре:
+                        @safeName:
                         <ul>
                             <li>
-                                Цена: @item.Price.ToString("0.00") (Р.)
+                                Цена: @item?.Price.ToString("0.00") (Р.)
                             </li>
                             <li>
                                 Производитель: @(item?.Actual_Brand?.Brand ?? "Неизвестен")
@@ -60,7 +63,7 @@
                             </li>
                         </ul>
 
-                        <a class="btn btn-outline-primary" href="#">Добавить товар в корзину!</a>
+                        <a class="btn btn-outline-primary" href="#" onclick="showInfo('@safeName')">Добавить товар в корзину!</a>
                     </div>
                 </div>
             }

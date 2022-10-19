@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using CopyStar.Sources.Models.DataBase;
+using Microsoft.AspNetCore.Mvc;
 
 namespace CopyStar.Sources.Controllers
 {
